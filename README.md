@@ -3,7 +3,7 @@
 
 Crawling tasnim website and EDA
 ## Web scraping
-script.py is my code that scrapping on [tasnim website](https://www.tasnimnews.com/fa/service/3/%D9%88%D8%B1%D8%B2%D8%B4%DB%8C), sport section using bs4
+[script.py](https://github.com/Keyvan-af/Crawl-website/blob/main/script.py) is my code that scrapping on [tasnim website](https://www.tasnimnews.com/fa/service/3/%D9%88%D8%B1%D8%B2%D8%B4%DB%8C), sport section using bs4
 ### Installation
 ```bash
 pip install requests
@@ -12,8 +12,8 @@ pip install bs4
 pip install fake_useragent
 ```
 ### Description
-- function for making request to each page of website and extract title, summery and url
-- we want news text so we get urls and each url address us to page that we can extract news text.
+- function to request each page of the website and extract title, summary and URL
+- we want the news text, so we get the URLs and each URL address takes us to a page from which we can extract the news text.
 ```python
 def get_url(sub_u):
     #request to pages, pull htmls and read with  BeautifulSoup
@@ -29,20 +29,16 @@ def get_url(sub_u):
     time.sleep(4)
     return urls
 ```
-sub_u is url that we extract with make_request function
+sub_u is the url we extract with the make_request function
 
-- We use pathlib to saving txt files in dir and using glob to append all news.
-- And at the end of the code saving data to csv file.
+- We use pathlib to store txt files in a directory and glob to append all news.
+- And at the end of the code, the data is stored in a csv file.
 ## EDA
 As we know Exploratory Data Analysis (EDA) is the process by which the data analyst becomes acquainted with their data to drive intuition and begin to formulate testable hypotheses.
-### Notebook Outline:
-- Environment set-up
-- Loading Data and get a brief overview of columns
-- Preprocessing and EDA
-- Conclusions
+
 #### Note:
-Farsi texts in plotting don't have good view. They are vice versa so i use arabic_reshaper package and import reshape to show correctly.
-##### Example usage in code
+Farsi texts in plotting do not have a good view. They are reversed, so I use arabic_reshaper package and import reshape to show properly.
+##### Example usage in [notebook](https://github.com/Keyvan-af/Crawl-website/blob/main/EDA.ipynb)
 ```python
 x1=[get_display(reshape(label)) for label in x]
 ```
