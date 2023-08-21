@@ -112,13 +112,11 @@ for p in trange(1,3):
 
 #using glob to extract text
 all_news = []
-for p in range(1,3):
-    for i in range(1,21):
-        for name in glob.iglob(f'Data/{p}/{i}.txt'):
-            with open(name, 'rt') as fd:
-                t=fd.read()
-                all_news.append(t)
-                
+for name in glob.iglob('***/**/*.txt'):
+    with open(name, 'rt') as fd:
+        t=fd.read()
+        all_news.append(t)
+        
 #save to csv
 df = pd.DataFrame({'title': title,
                    'summery': summery,
