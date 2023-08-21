@@ -36,6 +36,8 @@ sub_u is the url we extract with the make_request function
 ## EDA
 As we know Exploratory Data Analysis (EDA) is the process by which the data analyst becomes acquainted with their data to drive intuition and begin to formulate testable hypotheses.
 
+[Notebook in colab](https://colab.research.google.com/drive/1OU3TUH10yudyRAxpEseeYy7SAkrJ98e4?usp=drive_link)
+
 #### Note:
 Farsi texts in plotting do not have a good view. They are reversed, so I use arabic_reshaper package and import reshape to show properly.
 ##### Example usage in [notebook](https://github.com/Keyvan-af/Crawl-website/blob/main/EDA.ipynb)
